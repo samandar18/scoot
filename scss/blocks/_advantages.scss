@@ -1,35 +1,212 @@
 .advantages {
-	padding-top: 80px;
-	padding-bottom: 73px;
-	&__container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
+	padding: 160px 0px 200px 0px;
+	&__list {
+	  position: relative;
+	  width: 100%;
+	  max-width: 1150px;
+	  margin: 0;
+	  list-style: none;
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  &::before {
+		 content: url("../../images/line-advantages.png");
+		 position: absolute;
+		 top: 40px;
+		 left: -165px;
+	  }
 	}
-	&-span {
-		margin-bottom: 40px;
-		position: relative;
-		&__line {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-			position: absolute;
-			width: 974px;
-			height: 1px;
-			border: 15px solid #E5ECF4;
-		}
-		&__round {
-			margin-left: 205px;
-			display: inline-block;
-			width: 96px;
-			height: 96px;
-			background-repeat: no-repeat;
-			background-image: url();
-			background-image: url('../img/span1.svg');
-			background-color: #FCB72B;
-			border-radius: 50%;
-		}
+	&__item {
+	  width: 100%;
+	  max-width: 350px;
+	  display: flex;
+	  flex-direction: column;
 	}
-}
+	&__header {
+	  margin: 0;
+	  margin-bottom: 27px;
+	  font-size: 24px;
+	  line-height: 28px;
+	  letter-spacing: -1.07143px;
+	  color: #495567;
+	}
+	&__desc {
+	  margin: 0;
+	  font-family: "Lexend Deca";
+	  font-size: 15px;
+	  line-height: 25px;
+	  color: #939caa;
+	}
+ }
+ 
+ .locate::before {
+	content: url("../images/locate-svg.svg");
+	position: relative;
+ }
+ .pick-scooter::before {
+	content: url("../images/pick-scooter.svg");
+ }
+ .enjoy::before {
+	content: url("../images/enjoy-svg.svg");
+ }
+ .locate::before,
+ .pick-scooter::before,
+ .enjoy::before {
+	margin-bottom: 40px;
+	z-index: 2;
+ }
+ // fixes bug with responsive
+ @media only screen and (max-width: 1090px) {
+	.advantages {
+	  &__list {
+		 &::before {
+			left: -255px;
+		 }
+	  }
+	  &__header {
+		 font-size: 22px;
+	  }
+	  &__desc {
+		 font-size: 15px;
+	  }
+	}
+ }
+ @media only screen and (max-width: 955px) {
+	.advantages {
+	  &__list {
+		 &::before {
+			left: -350px;
+		 }
+	  }
+	  &__header {
+		 font-size: 22px;
+	  }
+	  &__desc {
+		 font-size: 15px;
+	  }
+	}
+ }
+ @media only screen and (max-width: 810px) {
+	.advantages {
+	  &__list {
+		 &::before {
+			left: -445px;
+		 }
+	  }
+	  &__header {
+		 font-size: 22px;
+	  }
+	  &__desc {
+		 font-size: 15px;
+	  }
+	}
+ }
+ // tablet version
+ @media only screen and (max-width: 768px) {
+	.advantages {
+	  padding-top: 122px;
+	  padding-bottom: 70px;
+	  &__list {
+		 padding: 0;
+		 width: 100%;
+		 flex-direction: column;
+		 &::before {
+			content: url("../../images/tablet-line-advantages.png");
+			left: 65px;
+			top: -122px;
+		 }
+	  }
+	  &__item {
+		 width: 100%;
+		 max-width: 573px;
+		 flex-direction: row;
+	  }
+	  &__item + &__item {
+		 margin-top: 40px;
+	  }
+	  &__desc,
+	  &__box {
+		 max-width: 573px;
+	  }
+	  &__box {
+		 margin-left: auto;
+	  }
+	  &__desc {
+		 max-width: 398px;
+	  }
+	}
+ }
+ @media only screen and (max-width: 520px) {
+	.advantages {
+	  &__list {
+		 &::before {
+			left: 40px;
+		 }
+	  }
+	  &__header {
+		 font-size: 19px;
+	  }
+	  &__desc {
+		 font-size: 12px;
+	  }
+	}
+ }
+ @media only screen and(max-width: 425px) {
+	.advantages {
+	  padding-top: 122px;
+	  padding-bottom: 70px;
+	  &__list {
+		 padding: 0;
+		 width: 100%;
+		 flex-direction: column;
+		 &::before {
+			content: url('n');
+		 }
+	  }
+	  &__item {
+		 width: 100%;
+		 max-width: 311px;
+		 flex-direction: column;
+		 align-items: center;
+	  }
+	  &__item + &__item {
+		 margin-top: 48px;
+	  }
+	  // &__desc,
+	  // &__box {
+	  //   max-width: 573px;
+	  // }
+	  &__box {
+		 margin-left: auto;
+	  }
+	  &__header {
+		 margin-bottom: 24px;
+		 font-size: 20px;
+		 line-height: 28px;
+		 text-align: center;
+		 letter-spacing: -0.892857px;
+	  }
+	  &__desc {
+		 max-width: 311px;
+		 font-size: 15px;
+		 line-height: 25px;
+		 text-align: center;
+	  }
+	}
+	.locate::before {
+	  content: url("../../images/mobile-locate.svg");
+	  position: relative;
+	}
+	.pick-scooter::before {
+	  content: url("../../images/mobile-pick-scoot.svg");
+	}
+	.enjoy::before {
+	  content: url("../../images/mobile-enjoy.svg");
+	}
+ 
+	.locate::before,
+ .pick-scooter::before,
+ .enjoy::before {
+	margin-bottom: 24px;
+ }
+ }
