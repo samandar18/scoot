@@ -366,6 +366,7 @@ template {
 }
 
 html {
+  font-family: "Space Mono";
   height: 100%;
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
