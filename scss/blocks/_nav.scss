@@ -1,0 +1,26 @@
+.nav {
+	white-space: nowrap;
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+	&__item {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&__link {
+		margin: 0;
+		font-family: "Space Mono";
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 25px;
+		color: #939CAA;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	&__item + &__item {
+		margin-left: 32px;
+	}
+}
+
