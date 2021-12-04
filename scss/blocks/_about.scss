@@ -68,7 +68,7 @@
 	left: -165px;
 	flex-shrink: 1;
  }
- .about--item:nth-child(even-1) .round::before {
+ .about--item:nth-child(odd) .round::before {
 	position: absolute;
 	content: url("../img/left-line.svg");
 	z-index: 3;
@@ -76,7 +76,7 @@
 	left: 250px;
 	flex-shrink: 1;
  }
- .about--item:nth-child(even-1) .round::after {
+ .about--item:nth-child(odd) .round::after {
 	position: absolute;
 	content: url("../img/round-right.png");
 	z-index: 2;
@@ -140,7 +140,7 @@
 	  &:nth-child(odd) {
 		 flex-direction: column-reverse;
 		 align-items: center;
-		 &:nth-child(even-1) {
+		 &:nth-child(even) {
 			flex-direction: column-reverse;
 			align-items: center;
 		 }

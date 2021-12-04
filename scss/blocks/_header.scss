@@ -27,19 +27,19 @@
 	}
 } 
 
-//@media only screen and (max-width:720px) {
-//	.header {
-//		padding: 35px 32px 15px;
-//	 }
-//	 .header__btn {
-//		display: inline-block;
-//	 }
-//	 .header-logo {
-//		margin: 0 auto;
-//		width: 75px;
-//		height: 20px;
-//	 }
-//	 .header__right {
-//		display: none;
-//	 }
-//  }
+@media only screen and (max-width:420px) {
+	.header {
+		padding: 35px 32px 15px;
+	 }
+	 .header__btn {
+		display: inline-block;
+	 }
+	 .header-logo {
+		margin: 0 auto;
+		width: 75px;
+		height: 20px;
+	 }
+	 .header__right {
+		display: none;
+	 }
+}
