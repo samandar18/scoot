@@ -10,7 +10,7 @@
 	  justify-content: space-between;
 	  align-items: center;
 	  &::before {
-		 content: url("../../images/line-advantages.png");
+		 content: url("../images/advantages.png");
 		 position: absolute;
 		 top: 40px;
 		 left: -165px;
@@ -39,19 +39,19 @@
 	}
  }
  
- .locate::before {
-	content: url("../images/locate-svg.svg");
+ .inner::before {
+	content: url("../img/inner-svg.svg");
 	position: relative;
  }
- .pick-scooter::before {
-	content: url("../images/pick-scooter.svg");
+ .roaster::before {
+	content: url("../img/roaster.svg");
  }
- .enjoy::before {
-	content: url("../images/enjoy-svg.svg");
+ .small::before {
+	content: url("../img/small.svg");
  }
- .locate::before,
- .pick-scooter::before,
- .enjoy::before {
+ .inner::before,
+ .roaster::before,
+ .small::before {
 	margin-bottom: 40px;
 	z-index: 2;
  }
@@ -111,7 +111,7 @@
 		 width: 100%;
 		 flex-direction: column;
 		 &::before {
-			content: url("../../images/tablet-line-advantages.png");
+			content: url("../img/advantages-line.png");
 			left: 65px;
 			top: -122px;
 		 }
@@ -125,10 +125,10 @@
 		 margin-top: 40px;
 	  }
 	  &__desc,
-	  &__box {
+	  &__text {
 		 max-width: 573px;
 	  }
-	  &__box {
+	  &__text {
 		 margin-left: auto;
 	  }
 	  &__desc {
@@ -173,10 +173,10 @@
 		 margin-top: 48px;
 	  }
 	  // &__desc,
-	  // &__box {
+	  // &__text {
 	  //   max-width: 573px;
 	  // }
-	  &__box {
+	  &__text {
 		 margin-left: auto;
 	  }
 	  &__header {
@@ -193,20 +193,20 @@
 		 text-align: center;
 	  }
 	}
-	.locate::before {
-	  content: url("../../images/mobile-locate.svg");
+	.inner::before {
+	  content: url("../img/inner-tel.svg");
 	  position: relative;
 	}
-	.pick-scooter::before {
-	  content: url("../../images/mobile-pick-scoot.svg");
+	.roaster::before {
+	  content: url("../img/roaster-tel.svg");
 	}
-	.enjoy::before {
-	  content: url("../../images/mobile-enjoy.svg");
+	.small::before {
+	  content: url("../img/small-tel.svg");
 	}
  
-	.locate::before,
- .pick-scooter::before,
- .enjoy::before {
+	.inner::before,
+ 	.roaster::before,
+ 	.small::before {
 	margin-bottom: 24px;
  }
  }

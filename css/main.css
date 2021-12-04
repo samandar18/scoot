@@ -510,56 +510,128 @@ img {
 }
 
 .hero {
-  padding: 10px 0 80px;
-  background-size: cover;
-  background: url("../img/hero-bg.svg");
+  padding: 153px 0 153px;
+  background-image: url("../img/hero-bg.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.hero__container {
-  padding-top: 153px;
-  padding-bottom: 157px;
+.hero__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hero__heading {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Space Mono";
-  font-weight: bold;
+  max-width: 500px;
   font-size: 56px;
   line-height: 56px;
-  color: #FFFFFF;
+  letter-spacing: -2.5px;
+  color: #ffffff;
 }
 
-.hero-inner {
-  margin-left: 115px;
+.hero__inner {
+  position: relative;
+  margin: 0;
+  margin-left: 32px;
+  padding: 0;
+  padding-left: 57px;
 }
 
-.hero-inner__desc {
-  width: 100%;
-  max-width: 405px;
+.hero__inner::before {
+  content: url("../img/hero-1.svg");
+  position: absolute;
+  left: -205px;
+  top: 40px;
+}
+
+.hero__inner::after {
+  content: url("../img/hero-2.svg");
+  position: absolute;
+  left: 440px;
+  top: 40px;
+  margin-left: 60px;
+}
+
+.hero__desc {
   margin: 0;
   margin-bottom: 40px;
+  max-width: 405px;
   font-family: "Lexend Deca";
-  font-weight: normal;
   font-size: 15px;
   line-height: 25px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
-  .hero__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .hero {
+    padding-top: 137px;
+    padding-bottom: 217px;
+    background-image: url("../img/hero-bg-tablet.jpg");
     text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  }
+  .hero__left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    max-width: 573px;
+  }
+  .hero__heading {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .hero__desc {
+    max-width: 573px;
+    margin: 0 auto 40px;
+  }
+  .hero__inner {
+    margin: 0 auto;
+    padding: 0;
+  }
+  .hero__inner::before {
+    content: url("");
+  }
+  .hero__inner::after {
+    left: -190px;
+    top: 200px;
+  }
+}
+
+@media only screen and (max-width: 395px) {
+  .hero__desc {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .hero {
+    padding-top: 115px;
+    padding-bottom: 200px;
+    background-image: url("../img/hero-bg-tel.jpg");
+  }
+  .hero__heading {
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -1.78571px;
+  }
+  .hero__desc {
+    max-width: 311px;
+    margin-bottom: 34px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .hero__inner::after {
+    top: 220px;
+    left: -305px;
   }
 }
 
@@ -585,7 +657,7 @@ img {
 }
 
 .advantages__list::before {
-  content: url("../../images/line-advantages.png");
+  content: url("../images/advantages.png");
   position: absolute;
   top: 40px;
   left: -165px;
@@ -620,22 +692,22 @@ img {
   color: #939caa;
 }
 
-.locate::before {
-  content: url("../images/locate-svg.svg");
+.inner::before {
+  content: url("../img/inner-svg.svg");
   position: relative;
 }
 
-.pick-scooter::before {
-  content: url("../images/pick-scooter.svg");
+.roaster::before {
+  content: url("../img/roaster.svg");
 }
 
-.enjoy::before {
-  content: url("../images/enjoy-svg.svg");
+.small::before {
+  content: url("../img/small.svg");
 }
 
-.locate::before,
-.pick-scooter::before,
-.enjoy::before {
+.inner::before,
+.roaster::before,
+.small::before {
   margin-bottom: 40px;
   z-index: 2;
 }
@@ -690,7 +762,7 @@ img {
             flex-direction: column;
   }
   .advantages__list::before {
-    content: url("../../images/tablet-line-advantages.png");
+    content: url("../img/advantages-line.png");
     left: 65px;
     top: -122px;
   }
@@ -705,10 +777,10 @@ img {
   .advantages__item + .advantages__item {
     margin-top: 40px;
   }
-  .advantages__desc, .advantages__box {
+  .advantages__desc, .advantages__text {
     max-width: 573px;
   }
-  .advantages__box {
+  .advantages__text {
     margin-left: auto;
   }
   .advantages__desc {
@@ -758,7 +830,7 @@ img {
   .advantages__item + .advantages__item {
     margin-top: 48px;
   }
-  .advantages__box {
+  .advantages__text {
     margin-left: auto;
   }
   .advantages__header {
@@ -774,19 +846,19 @@ img {
     line-height: 25px;
     text-align: center;
   }
-  .locate::before {
-    content: url("../../images/mobile-locate.svg");
+  .inner::before {
+    content: url("../img/inner-tel.svg");
     position: relative;
   }
-  .pick-scooter::before {
-    content: url("../../images/mobile-pick-scoot.svg");
+  .roaster::before {
+    content: url("../img/roaster-tel.svg");
   }
-  .enjoy::before {
-    content: url("../../images/mobile-enjoy.svg");
+  .small::before {
+    content: url("../img/small-tel.svg");
   }
-  .locate::before,
-  .pick-scooter::before,
-  .enjoy::before {
+  .inner::before,
+  .roaster::before,
+  .small::before {
     margin-bottom: 24px;
   }
 }
