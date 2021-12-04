@@ -92,6 +92,9 @@
 		 margin-left: 24px;
 	  }
 	}
+	&__ico path:hover {
+		fill: white;
+	}
  }
  
  @media only screen and(max-width:850px) {
